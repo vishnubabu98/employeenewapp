@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-addemp',
@@ -15,6 +16,10 @@ export class AddempComponent {
   username=""
   password=""
 
+  constructor(private api:ApiService){
+    
+  }
+
   readValues=()=>{
     let data:any=
     {
@@ -27,9 +32,10 @@ export class AddempComponent {
       "password":this.password
     }
     console.log(data)
+    this.api.addCourse(data).subscribe(
+      (response)=>{
+        console.log(response)
+      }
+    )
   }
-
-
-
-
 }
