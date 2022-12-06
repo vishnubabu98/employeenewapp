@@ -15,12 +15,14 @@
                             <th scope="col">username</th>
                             <th scope="col">password</th>
                           </tr>
-                          <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                          <tr *ngFor="let i of data">
+                            <td>{{i.empcode}}</td>
+                            <td>{{i.designation}}</td>
+                            <td>{{i.salary}}</td>
+                            <td>{{i.companyName}}</td>
+                            <td>{{i.mobno}}</td>
+                            <td>{{i.username}}</td>
+                            <td>{{i.password}}</td>
                           </tr>
                         </thead>
                       </table>
