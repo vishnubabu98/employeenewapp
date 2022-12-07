@@ -9,10 +9,13 @@ export class ApiService {
   constructor(private http:HttpClient) {
 
    }
-   fetchCourses=()=>{
+   fetchEmployee=()=>{
     return this.http.get("http://localhost:8080/view")
    }
-   addCourse=(dataToSend:any)=>{
+   addEmployee=(dataToSend:any)=>{
     return this.http.post("http://localhost:8080/add",dataToSend)
+   }
+   searchEmployee=(dataToSend:any)=>{
+    return this.http.post("http://localhost:8080/search",dataToSend)
    }
 }

@@ -8,6 +8,7 @@ import { ApiService } from '../api.service';
 })
 export class AddempComponent {
 
+  id=""
   empcode=""
   designation=""
   salary=""
@@ -23,6 +24,7 @@ export class AddempComponent {
   readValues=()=>{
     let data:any=
     {
+      "id":this.id,
       "empcode":this.empcode,
       "designation":this.designation,
       "salary":this.salary,
@@ -32,9 +34,10 @@ export class AddempComponent {
       "password":this.password
     }
     console.log(data)
-    this.api.addCourse(data).subscribe(
-      (response)=>{
+    this.api.addEmployee(data).subscribe(
+      (response:any)=>{
         console.log(response)
+      
       }
     )
   }
