@@ -9,7 +9,7 @@ import { ApiService } from '../api.service';
 export class ViewEmpComponent {
 
   constructor(private api:ApiService){
-    this.api.fetchCourses().subscribe(
+    this.api.fetchEmployee().subscribe(
       (response)=>{
         this.data=response
       }
